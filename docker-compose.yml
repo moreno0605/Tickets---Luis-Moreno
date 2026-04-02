@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app-tickets:
+    build: .
+    container_name: upq_tickets_container
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html/
+    environment:
+      - TZ=America/Mexico_City
